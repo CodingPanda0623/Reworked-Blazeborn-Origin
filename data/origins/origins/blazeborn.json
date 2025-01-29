@@ -1,0 +1,40 @@
+{
+    "name": "Blazeborn",
+    "description": "Late Descendants of the Blaze, the Blazeborn are naturally immune to the perils of the nether.",
+    "powers": [
+        "betterblazeborn:blazesounds",
+        "betterblazeborn:fortress_spawn",
+        "betterblazeborn:fire",
+        "origins:fire_immunity",
+        "betterblazeborn:heatbased",
+        "betterblazeborn:burning_wrath",
+        "betterblazeborn:fiery_barrage",
+        "betterblazeborn:hover",
+        "betterblazeborn:neutral",
+        "origins:hotblooded",
+        "betterblazeborn:hydrophobia",
+        "betterblazeborn:blazeparticles",
+        "origins:damage_from_snowballs",
+        "origins:damage_from_potions",
+        "betterblazeborn:hoverbar",
+        "betterblazeborn:hoverdrain",
+        "betterblazeborn:hoverregain",
+        "betterblazeborn:lavafall",
+        "betterblazeborn:flame_body",
+        "betterblazeborn:nosleep",
+        "origins:conduit_power_on_land",
+        "betterblazeborn:airbreakspeed",
+        "betterblazeborn:autosmelt",
+        "betterblazeborn:autosmeltbar",
+        "betterblazeborn:autosmeltregain",
+        "betterblazeborn:hellfork",
+        "betterblazeborn:infernalsupernova",
+        "betterblazeborn:burnarmor"
+    ],
+    "icon": {
+        "item": "minecraft:blaze_powder"
+    },
+    "order": 1,
+    "impact": 3,
+    "loading_priority": 1
+}

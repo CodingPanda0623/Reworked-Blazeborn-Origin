@@ -1,0 +1,1235 @@
+{
+    "name": "Flame Body",
+    "description": "Due to your flame body, you are faster in hot biomes or if you're on fire, but slower in wet/cold biomes. You also take significantly more damage from freezing, and slowly freeze while it's snowing. You're also immune to fire resistance (why would you need it?).",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Slowness in cold biomes can be countered by setting yourself on fire while slowness in wet biomes can be countered with conduit power."
+        }
+    ],
+    "type": "origins:multiple",
+    "fire_resistance_immune": {
+        "type": "origins:effect_immunity",
+        "effect": "minecraft:fire_resistance"
+    },
+    "shiver": {
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        { 
+                            "type": "origins:or",
+                            "conditions": [
+                                {
+                                    "type": "origins:in_rain"
+                                },
+                                {
+                                    "type": "origins:fluid_height",
+                                    "fluid": "minecraft:water",
+                                    "comparison": ">",
+                                    "compare_to": 0
+                                },
+                                {
+                                    "type": "origins:biome",
+                                    "biomes": [
+                                        "minecraft:bamboo_jungle",
+                                        "minecraft:mangrove_swamp",
+                                        "minecraft:mushroom_fields",
+                                        "minecraft:jungle",
+                                        "minecraft:swamp"
+                                    ]
+                                }
+                            ]  
+                        },
+                        {
+                            "type": "origins:status_effect",
+                            "effect": "minecraft:conduit_power",
+                            "inverted": true
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:biome",
+                            "condition": {
+                                "type": "origins:temperature",
+                                "comparison": "<=",
+                                "compare_to": 0.15
+                            }
+                        },
+                        {
+                            "inverted": true,
+                            "type": "origins:on_fire"
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:exposed_to_sky"
+                        },
+                        {
+                            "type": "origins:or",
+                            "conditions": [
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biome": "minecraft:stony_peaks"
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 776
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biomes": [
+                                                "minecraft:sparse_jungle",
+                                                "minecraft:jungle",
+                                                "minecraft:bamboo_jungle"
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 736
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biome": "minecraft:mushroom_fields"
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 694
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biomes": [
+                                                "minecraft:beach",
+                                                "minecraft:plains",
+                                                "minecraft:sunflower_plains",
+                                                "minecraft:swamp",
+                                                "minecraft:mangrove_swamp"
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 616
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biomes": [
+                                                "minecraft:forest",
+                                                "minecraft:flower_forest",
+                                                "minecraft:dark_forest"
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 536
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biomes": [
+                                                "minecraft:birch_forest",
+                                                "minecraft:old_growth_birch_forest"
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 454
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biomes": [
+                                                "minecraft:meadow",
+                                                "minecraft:cherry_grove",
+                                                "minecraft:river",
+                                                "minecraft:ocean",
+                                                "minecraft:deep_ocean",
+                                                "minecraft:lukewarm_ocean",
+                                                "minecraft:deep_lukewarm_ocean",
+                                                "minecraft:warm_ocean",
+                                                "minecraft:cold_ocean",
+                                                "minecraft:deep_cold_ocean"
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 378
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biomes": [
+                                                "minecraft:windswept_forest",
+                                                "minecraft:windswept_gravelly_hills",
+                                                "minecraft:windswept_hills",
+                                                "minecraft:stony_shore"
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 128
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biomes": [
+                                                "minecraft:taiga",
+                                                "minecraft:old_growth_spruce_taiga"
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 168
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biome": "minecraft:old_growth_pine_taiga"
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 208
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "origins:predicate",
+                            "predicate": "betterblazeborn:weather_rain"
+                        },
+                        {
+                            "inverted": true,
+                            "type": "origins:on_fire"
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:shaking"
+    },
+    "speed": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:biome",
+                    "condition": {
+                        "type": "origins:temperature",
+                        "comparison": ">=",
+                        "compare_to": 2.0
+                    }
+                },
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "inverted": true,
+                            "type": "origins:biome",
+                            "biomes": [
+                                "minecraft:bamboo_jungle",
+                                "minecraft:mangrove_swamp",
+                                "minecraft:mushroom_fields",
+                                "minecraft:jungle",
+                                "minecraft:swamp"
+                            ]
+                        },
+                        {
+                            "inverted": true,
+                            "type": "origins:biome",
+                            "condition": {
+                                "type": "origins:temperature",
+                                "comparison": "<=",
+                                "compare_to": 0.15
+                            }
+                        },
+                        {
+                            "inverted": true,
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:exposed_to_sky"
+                                },
+                                {
+                                    "type": "origins:or",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:and",
+                                            "conditions": [
+                                                {
+                                                    "type": "origins:biome",
+                                                    "biome": "minecraft:stony_peaks"
+                                                },
+                                                {
+                                                    "type": "origins:distance_from_coordinates",
+                                                    "ignore_x": true,
+                                                    "ignore_z": true,
+                                                    "offset": {
+                                                        "y": 0
+                                                    },
+                                                    "comparison": ">=",
+                                                    "compare_to": 776
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:and",
+                                            "conditions": [
+                                                {
+                                                    "type": "origins:biome",
+                                                    "biomes": [
+                                                        "minecraft:sparse_jungle",
+                                                        "minecraft:jungle",
+                                                        "minecraft:bamboo_jungle"
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "origins:distance_from_coordinates",
+                                                    "ignore_x": true,
+                                                    "ignore_z": true,
+                                                    "offset": {
+                                                        "y": 0
+                                                    },
+                                                    "comparison": ">=",
+                                                    "compare_to": 736
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:and",
+                                            "conditions": [
+                                                {
+                                                    "type": "origins:biome",
+                                                    "biome": "minecraft:mushroom_fields"
+                                                },
+                                                {
+                                                    "type": "origins:distance_from_coordinates",
+                                                    "ignore_x": true,
+                                                    "ignore_z": true,
+                                                    "offset": {
+                                                        "y": 0
+                                                    },
+                                                    "comparison": ">=",
+                                                    "compare_to": 694
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:and",
+                                            "conditions": [
+                                                {
+                                                    "type": "origins:biome",
+                                                    "biomes": [
+                                                        "minecraft:beach",
+                                                        "minecraft:plains",
+                                                        "minecraft:sunflower_plains",
+                                                        "minecraft:swamp",
+                                                        "minecraft:mangrove_swamp"
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "origins:distance_from_coordinates",
+                                                    "ignore_x": true,
+                                                    "ignore_z": true,
+                                                    "offset": {
+                                                        "y": 0
+                                                    },
+                                                    "comparison": ">=",
+                                                    "compare_to": 616
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:and",
+                                            "conditions": [
+                                                {
+                                                    "type": "origins:biome",
+                                                    "biomes": [
+                                                        "minecraft:forest",
+                                                        "minecraft:flower_forest",
+                                                        "minecraft:dark_forest"
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "origins:distance_from_coordinates",
+                                                    "ignore_x": true,
+                                                    "ignore_z": true,
+                                                    "offset": {
+                                                        "y": 0
+                                                    },
+                                                    "comparison": ">=",
+                                                    "compare_to": 536
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:and",
+                                            "conditions": [
+                                                {
+                                                    "type": "origins:biome",
+                                                    "biomes": [
+                                                        "minecraft:birch_forest",
+                                                        "minecraft:old_growth_birch_forest"
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "origins:distance_from_coordinates",
+                                                    "ignore_x": true,
+                                                    "ignore_z": true,
+                                                    "offset": {
+                                                        "y": 0
+                                                    },
+                                                    "comparison": ">=",
+                                                    "compare_to": 454
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:and",
+                                            "conditions": [
+                                                {
+                                                    "type": "origins:biome",
+                                                    "biomes": [
+                                                        "minecraft:meadow",
+                                                        "minecraft:cherry_grove",
+                                                        "minecraft:river",
+                                                        "minecraft:ocean",
+                                                        "minecraft:deep_ocean",
+                                                        "minecraft:lukewarm_ocean",
+                                                        "minecraft:deep_lukewarm_ocean",
+                                                        "minecraft:warm_ocean",
+                                                        "minecraft:cold_ocean",
+                                                        "minecraft:deep_cold_ocean"
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "origins:distance_from_coordinates",
+                                                    "ignore_x": true,
+                                                    "ignore_z": true,
+                                                    "offset": {
+                                                        "y": 0
+                                                    },
+                                                    "comparison": ">=",
+                                                    "compare_to": 378
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:and",
+                                            "conditions": [
+                                                {
+                                                    "type": "origins:biome",
+                                                    "biomes": [
+                                                        "minecraft:windswept_forest",
+                                                        "minecraft:windswept_gravelly_hills",
+                                                        "minecraft:windswept_hills",
+                                                        "minecraft:stony_shore"
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "origins:distance_from_coordinates",
+                                                    "ignore_x": true,
+                                                    "ignore_z": true,
+                                                    "offset": {
+                                                        "y": 0
+                                                    },
+                                                    "comparison": ">=",
+                                                    "compare_to": 128
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:and",
+                                            "conditions": [
+                                                {
+                                                    "type": "origins:biome",
+                                                    "biomes": [
+                                                        "minecraft:taiga",
+                                                        "minecraft:old_growth_spruce_taiga"
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "origins:distance_from_coordinates",
+                                                    "ignore_x": true,
+                                                    "ignore_z": true,
+                                                    "offset": {
+                                                        "y": 0
+                                                    },
+                                                    "comparison": ">=",
+                                                    "compare_to": 168
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:and",
+                                            "conditions": [
+                                                {
+                                                    "type": "origins:biome",
+                                                    "biome": "minecraft:old_growth_pine_taiga"
+                                                },
+                                                {
+                                                    "type": "origins:distance_from_coordinates",
+                                                    "ignore_x": true,
+                                                    "ignore_z": true,
+                                                    "offset": {
+                                                        "y": 0
+                                                    },
+                                                    "comparison": ">=",
+                                                    "compare_to": 208
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:predicate",
+                                    "predicate": "betterblazeborn:weather_rain"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "origins:on_fire"
+                        }
+                    ]
+                }
+            ]
+        },
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "addition",
+			"value": 0.1
+		}
+    },
+    "slowness": {
+        "type": "origins:conditioned_attribute",
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:biome",
+                            "biomes": [
+                                "minecraft:bamboo_jungle",
+                                "minecraft:mangrove_swamp",
+                                "minecraft:mushroom_fields",
+                                "minecraft:jungle",
+                                "minecraft:swamp"
+                            ]
+                        },
+                        {
+                            "inverted": true,
+                            "type": "origins:status_effect",
+                            "effect": "minecraft:conduit_power"
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:biome",
+                            "condition": {
+                                "type": "origins:temperature",
+                                "comparison": "<=",
+                                "compare_to": 0.15
+                            }
+                        },
+                        {
+                            "inverted": true,
+                            "type": "origins:on_fire"
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:exposed_to_sky"
+                        },
+                        {
+                            "type": "origins:or",
+                            "conditions": [
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biome": "minecraft:stony_peaks"
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 776
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biomes": [
+                                                "minecraft:sparse_jungle",
+                                                "minecraft:jungle",
+                                                "minecraft:bamboo_jungle"
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 736
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biome": "minecraft:mushroom_fields"
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 694
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biomes": [
+                                                "minecraft:beach",
+                                                "minecraft:plains",
+                                                "minecraft:sunflower_plains",
+                                                "minecraft:swamp",
+                                                "minecraft:mangrove_swamp"
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 616
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biomes": [
+                                                "minecraft:forest",
+                                                "minecraft:flower_forest",
+                                                "minecraft:dark_forest"
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 536
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biomes": [
+                                                "minecraft:birch_forest",
+                                                "minecraft:old_growth_birch_forest"
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 454
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biomes": [
+                                                "minecraft:meadow",
+                                                "minecraft:cherry_grove",
+                                                "minecraft:river",
+                                                "minecraft:ocean",
+                                                "minecraft:deep_ocean",
+                                                "minecraft:lukewarm_ocean",
+                                                "minecraft:deep_lukewarm_ocean",
+                                                "minecraft:warm_ocean",
+                                                "minecraft:cold_ocean",
+                                                "minecraft:deep_cold_ocean"
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 378
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biomes": [
+                                                "minecraft:windswept_forest",
+                                                "minecraft:windswept_gravelly_hills",
+                                                "minecraft:windswept_hills",
+                                                "minecraft:stony_shore"
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 128
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biomes": [
+                                                "minecraft:taiga",
+                                                "minecraft:old_growth_spruce_taiga"
+                                            ]
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 168
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:biome",
+                                            "biome": "minecraft:old_growth_pine_taiga"
+                                        },
+                                        {
+                                            "type": "origins:distance_from_coordinates",
+                                            "ignore_x": true,
+                                            "ignore_z": true,
+                                            "offset": {
+                                                "y": 0
+                                            },
+                                            "comparison": ">=",
+                                            "compare_to": 208
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "origins:predicate",
+                            "predicate": "betterblazeborn:weather_rain"
+                        },
+                        {
+                            "inverted": true,
+                            "type": "origins:on_fire"
+                        }
+                    ]
+                }
+            ]
+        },
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "addition",
+			"value": -0.05
+		}
+    },
+    "morefreezedamage": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "freeze"
+        },
+        "modifier": {
+            "operation": "multiply_base_multiplicative",
+            "value": 4
+        }
+    },
+    "freezetimer": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 7,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 8,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_freezetimer",
+                "comparison": ">",
+                "compare_to": 0
+            }
+        }
+    },
+    "freezeincrement": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:exposed_to_sky"
+                    },
+                    {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:biome",
+                                "condition": {
+                                    "type": "origins:temperature",
+                                    "comparison": "<=",
+                                    "compare_to": 0.15
+                                }
+                            },
+                            {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:biome",
+                                        "biome": "minecraft:stony_peaks"
+                                    },
+                                    {
+                                        "type": "origins:distance_from_coordinates",
+                                        "ignore_x": true,
+                                        "ignore_z": true,
+                                        "offset": {
+                                            "y": 0
+                                        },
+                                        "comparison": ">=",
+                                        "compare_to": 776
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:biome",
+                                        "biomes": [
+                                            "minecraft:sparse_jungle",
+                                            "minecraft:jungle",
+                                            "minecraft:bamboo_jungle"
+                                        ]
+                                    },
+                                    {
+                                        "type": "origins:distance_from_coordinates",
+                                        "ignore_x": true,
+                                        "ignore_z": true,
+                                        "offset": {
+                                            "y": 0
+                                        },
+                                        "comparison": ">=",
+                                        "compare_to": 736
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:biome",
+                                        "biome": "minecraft:mushroom_fields"
+                                    },
+                                    {
+                                        "type": "origins:distance_from_coordinates",
+                                        "ignore_x": true,
+                                        "ignore_z": true,
+                                        "offset": {
+                                            "y": 0
+                                        },
+                                        "comparison": ">=",
+                                        "compare_to": 694
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:biome",
+                                        "biomes": [
+                                            "minecraft:beach",
+                                            "minecraft:plains",
+                                            "minecraft:sunflower_plains",
+                                            "minecraft:swamp",
+                                            "minecraft:mangrove_swamp"
+                                        ]
+                                    },
+                                    {
+                                        "type": "origins:distance_from_coordinates",
+                                        "ignore_x": true,
+                                        "ignore_z": true,
+                                        "offset": {
+                                            "y": 0
+                                        },
+                                        "comparison": ">=",
+                                        "compare_to": 616
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:biome",
+                                        "biomes": [
+                                            "minecraft:forest",
+                                            "minecraft:flower_forest",
+                                            "minecraft:dark_forest"
+                                        ]
+                                    },
+                                    {
+                                        "type": "origins:distance_from_coordinates",
+                                        "ignore_x": true,
+                                        "ignore_z": true,
+                                        "offset": {
+                                            "y": 0
+                                        },
+                                        "comparison": ">=",
+                                        "compare_to": 536
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:biome",
+                                        "biomes": [
+                                            "minecraft:birch_forest",
+                                            "minecraft:old_growth_birch_forest"
+                                        ]
+                                    },
+                                    {
+                                        "type": "origins:distance_from_coordinates",
+                                        "ignore_x": true,
+                                        "ignore_z": true,
+                                        "offset": {
+                                            "y": 0
+                                        },
+                                        "comparison": ">=",
+                                        "compare_to": 454
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:biome",
+                                        "biomes": [
+                                            "minecraft:meadow",
+                                            "minecraft:cherry_grove",
+                                            "minecraft:river",
+                                            "minecraft:ocean",
+                                            "minecraft:deep_ocean",
+                                            "minecraft:lukewarm_ocean",
+                                            "minecraft:deep_lukewarm_ocean",
+                                            "minecraft:warm_ocean",
+                                            "minecraft:cold_ocean",
+                                            "minecraft:deep_cold_ocean"
+                                        ]
+                                    },
+                                    {
+                                        "type": "origins:distance_from_coordinates",
+                                        "ignore_x": true,
+                                        "ignore_z": true,
+                                        "offset": {
+                                            "y": 0
+                                        },
+                                        "comparison": ">=",
+                                        "compare_to": 378
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:biome",
+                                        "biomes": [
+                                            "minecraft:windswept_forest",
+                                            "minecraft:windswept_gravelly_hills",
+                                            "minecraft:windswept_hills",
+                                            "minecraft:stony_shore"
+                                        ]
+                                    },
+                                    {
+                                        "type": "origins:distance_from_coordinates",
+                                        "ignore_x": true,
+                                        "ignore_z": true,
+                                        "offset": {
+                                            "y": 0
+                                        },
+                                        "comparison": ">=",
+                                        "compare_to": 128
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:biome",
+                                        "biomes": [
+                                            "minecraft:taiga",
+                                            "minecraft:old_growth_spruce_taiga"
+                                        ]
+                                    },
+                                    {
+                                        "type": "origins:distance_from_coordinates",
+                                        "ignore_x": true,
+                                        "ignore_z": true,
+                                        "offset": {
+                                            "y": 0
+                                        },
+                                        "comparison": ">=",
+                                        "compare_to": 168
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "origins:and",
+                                "conditions": [
+                                    {
+                                        "type": "origins:biome",
+                                        "biome": "minecraft:old_growth_pine_taiga"
+                                    },
+                                    {
+                                        "type": "origins:distance_from_coordinates",
+                                        "ignore_x": true,
+                                        "ignore_z": true,
+                                        "offset": {
+                                            "y": 0
+                                        },
+                                        "comparison": ">=",
+                                        "compare_to": 208
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "origins:predicate",
+                        "predicate": "betterblazeborn:weather_rain"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:on_fire"
+                    }
+                ]
+            },
+            "if_action": {
+                "type": "origins:change_resource",
+                "resource": "*:*_freezetimer",
+                "change": 1
+            },
+            "else_action": {
+                "type": "origins:change_resource",
+                "resource": "*:*_freezetimer",
+                "change": -1
+            }
+        }
+    },
+    "freezeoverlay": {
+        "type": "origins:overlay",
+        "texture": "minecraft:textures/misc/powder_snow_outline.png",
+        "draw_mode": "texture",
+        "draw_phase": "below_hud",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_freezetimer",
+            "comparison": ">",
+            "compare_to": 0
+        }
+    },
+    "freeze": {
+        "type": "origins:damage_over_time",
+        "damage": 1,
+        "damage_type": "freeze",
+        "interval": 40,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_freezetimer",
+            "comparison": "==",
+            "compare_to": 7
+        }
+    }
+}

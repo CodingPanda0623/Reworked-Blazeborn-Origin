@@ -1,0 +1,17 @@
+{
+    "name": "No Sleeping",
+    "description": "Due to your nether origins, sleep is a foreign concept to you.",
+    "type": "origins:multiple",
+    "no_phantoms": {
+        "type": "origins:modify_insomnia_ticks",
+        "modifier": {
+            "operation": "set_total",
+            "value": 0
+        }
+    },
+    "no_sleep": {
+        "type": "origins:prevent_sleep",
+        "set_spawn_point": true,
+        "message": "Sleep? WTF is that???"
+    }
+}

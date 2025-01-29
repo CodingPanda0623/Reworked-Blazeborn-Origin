@@ -1,0 +1,9 @@
+{
+    "name": "§6Superheated",
+    "description": "While holding this weapon in your offhand or mainhand, you get set on fire.",
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:set_on_fire",
+        "duration": 4
+    }
+}

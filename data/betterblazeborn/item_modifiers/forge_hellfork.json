@@ -1,0 +1,48 @@
+[
+    {
+        "function": "minecraft:set_nbt",
+        "tag": "{CustomModelData:315621}"
+    },
+    {
+        "function": "minecraft:set_lore",
+        "entity": "this",
+        "lore": [
+            {
+                "text": "A trident from the overworld, reforged from the depths of hell.",
+                "color": "red"
+            },
+            {
+                "text": "Holding right click while in lava or on fire in a hot biome will launch you.",
+                "color": "red"
+            }
+        ]
+    },
+    {
+        "function": "minecraft:set_name",
+        "entity": "this",
+        "name": {
+            "text": "Hellfork",
+            "color": "gold",
+            "italic": false
+        }
+    },
+    {
+        "function": "minecraft:set_enchantments",
+        "enchantments": {
+            "minecraft:riptide": 3
+        },
+        "add": true
+    },
+    {
+        "function": "apoli:add_power",
+        "power": "betterblazeborn:eternal_flame",
+        "slot": "mainhand",
+        "negative": true
+    },
+    {
+        "function": "apoli:add_power",
+        "power": "betterblazeborn:eternal_flame",
+        "slot": "offhand",
+        "negative": true
+    }
+]

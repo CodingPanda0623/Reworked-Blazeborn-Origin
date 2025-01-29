@@ -1,0 +1,12 @@
+{
+    "name": "Burning Wrath",
+    "description": "When on fire, channels the flames into your next attack, dealing more damage.",
+    "condition": {
+        "type": "origins:on_fire"
+    },
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+        "operation": "addition",
+        "value": 4.5
+    }
+}

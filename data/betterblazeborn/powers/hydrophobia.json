@@ -1,0 +1,52 @@
+{
+    "name": "§3Hydrophobia",
+    "description": "Being of a warm nature, you take damage when exposed to water or rain. Effect mitigated with conduit power.",
+    "type": "origins:multiple",
+    "hydrophobia_water": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:water",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:conduit_power",
+                    "inverted": true
+                }
+            ]
+        },
+        "type": "origins:damage_over_time",
+        "interval": 10,
+        "onset_delay": 1,
+        "damage": 4,
+        "damage_type": "origins:hurt_by_water",
+        "protection_enchantment": "origins:water_protection",
+	    "protection_effectiveness": 1.0
+    },
+    "hydrophobia_rain": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:in_rain"
+                },
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:conduit_power",
+                    "inverted": true
+                }
+            ]
+        },
+        "type": "origins:damage_over_time",
+        "interval": 10,
+        "onset_delay": 1,
+        "damage": 1,
+        "damage_type": "origins:hurt_by_water",
+        "protection_enchantment": "origins:water_protection",
+	    "protection_effectiveness": 1.0
+    }
+}

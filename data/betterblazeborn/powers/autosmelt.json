@@ -1,0 +1,76 @@
+{
+    "name": "Supersmelter",
+    "description": "You can smelt all the items in your hotbar and offhand. Recharges slowly.",
+    "badges": [
+        {
+            "type": "origins:keybind",
+            "sprite": "minecraft:textures/block/furnace_front_on.png",
+            "text": "Smelt with %s"
+        }
+    ],
+    "type": "origins:active_self",
+    "condition": {
+        "type": "origins:resource",
+        "resource": "betterblazeborn:autosmeltbar",
+        "comparison": "==",
+        "compare_to": 320
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "item modify entity @s hotbar.0 betterblazeborn:blazeborn_smelt"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "item modify entity @s hotbar.1 betterblazeborn:blazeborn_smelt"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "item modify entity @s hotbar.2 betterblazeborn:blazeborn_smelt"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "item modify entity @s hotbar.3 betterblazeborn:blazeborn_smelt"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "item modify entity @s hotbar.4 betterblazeborn:blazeborn_smelt"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "item modify entity @s hotbar.5 betterblazeborn:blazeborn_smelt"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "item modify entity @s hotbar.6 betterblazeborn:blazeborn_smelt"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "item modify entity @s hotbar.7 betterblazeborn:blazeborn_smelt"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "item modify entity @s hotbar.8 betterblazeborn:blazeborn_smelt"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "item modify entity @s weapon.offhand betterblazeborn:blazeborn_smelt"
+            },
+            {
+                "type": "origins:change_resource",
+                "resource": "betterblazeborn:autosmeltbar",
+                "change": -480,
+                "operation": "add"
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "block.furnace.fire_crackle"
+            }
+        ]
+    },
+    "key": {
+        "key": "key.loadToolbarActivator"
+    }
+}

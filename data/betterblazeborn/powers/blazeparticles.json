@@ -1,0 +1,22 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "smoke": {
+        "type": "origins:particle",
+        "particle": "minecraft:large_smoke",
+        "frequency": 4,
+        "condition": {
+            "inverted": true,
+            "type": "origins:sneaking"
+        }
+    },
+    "flame": {
+        "type": "origins:particle",
+        "particle": "minecraft:flame",
+        "frequency": 4,
+        "condition": {
+            "inverted": true,
+            "type": "origins:sneaking"
+        }
+    }
+}

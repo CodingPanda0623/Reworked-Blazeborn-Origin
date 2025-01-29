@@ -1,0 +1,74 @@
+{
+    "name": "Heat-based Biology",
+    "description": "You can move, swim, and see better when in lava. However, you also can't swim in water and get slowness in rain. All debuffs mitigated by Conduit Power.",
+    "type": "origins:multiple",
+    "lavasee": {
+        "condition": {
+            "type": "origins:biome"
+        },
+        "type": "origins:lava_vision",
+        "s": 0,
+        "v": 50
+    },
+    "lavaspeed": {
+        "type": "origins:modify_lava_speed",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.85
+        }
+    },
+    "lavaswim": {
+        "name": "swim",
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:submerged_in",
+                    "fluid": "minecraft:lava"
+                },
+                {
+                    "type": "origins:sprinting"
+                }
+            ]
+        },
+        "type": "origins:swimming"
+    },
+    "nowaterswim": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:submerged_in",
+                    "fluid": "minecraft:water"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:conduit_power"
+                }
+            ]
+        },
+        "type": "origins:prevent_sprinting"
+    },
+    "waterspeed": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:conduit_power",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:in_rain"
+                }
+            ]
+        },
+        "type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "addition",
+			"value": -0.05
+		}
+    }
+}
